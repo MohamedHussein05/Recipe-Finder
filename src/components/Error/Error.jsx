@@ -11,7 +11,11 @@ const Error = () => (
       <span>Something went wrong!</span>
       <span>{"Let's try again"}</span>
     </p>
-    <button type="button" onClick={() => location.reload()} className="errBtn">
+    <button
+      type="button"
+      onClick={() => window.location.assign("/")}
+      className="errBtn"
+    >
       TRY AGAIN!
     </button>
   </div>

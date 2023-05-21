@@ -9,7 +9,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header container">
-      <h1 onClick={() => location.reload()} className="logo">
+      <h1 onClick={() => window.location.assign("/")} className="logo">
         tastebite
       </h1>
       <div className="navbar">
