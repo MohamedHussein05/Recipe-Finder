@@ -1,0 +1,105 @@
+.footer {
+  background-color: var(--color-bg-sec);
+  color: var(--color-txt-sec);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-txt-sec);
+  font-weight: 400;
+  user-select: none;
+}
+.footerBody {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.footerText {
+  max-width: 22rem;
+  line-height: 1.6;
+  text-transform: none;
+}
+.footerText .logo {
+  cursor: auto;
+}
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: start;
+}
+.footerLinks li:first-of-type {
+  font-weight: 600;
+  color: var(--color-txt-main);
+  margin-bottom: 0.75rem;
+}
+.footerLinks li {
+  cursor: pointer;
+  transition: var(--trans-main);
+  margin-bottom: 0.25rem;
+}
+.footerLinks li:hover {
+  opacity: 0.5;
+}
+.footerSocial {
+  width: 100%;
+  border-top: 1px solid var(--color-txt-sec);
+  padding: 1.5rem 0 0;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footerCopyRights {
+  font-size: 1rem;
+  font-family: var(--font-txt-small-main);
+  font-weight: 400;
+}
+.footerSocialIcons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  order: -1;
+}
+.footerSocialIcons > * {
+  transition: var(--trans-main);
+}
+.footerSocialIcons > *:hover {
+  transform: scale(1.2);
+}
+.footerFBIcon:hover {
+  color: var(--color-brand-fb);
+}
+.footerTwitterIcon:hover {
+  color: var(--color-brand-twitter);
+}
+.footerInstaIcon:hover {
+  color: var(--color-brand-insta);
+}
+.footerYtIcon:hover {
+  color: var(--color-brand-yt);
+}
+@media (min-width: 768px) {
+  .footerBody {
+    grid-template-columns: 1fr 0.75fr;
+    grid-template-rows: 1fr;
+  }
+  .footerCopyRights {
+    font-size: 1.1rem;
+  }
+  .footerSocial {
+    flex-direction: row;
+  }
+  .footerSocialIcons {
+    order: 0;
+    font-size: 1.25rem;
+  }
+}

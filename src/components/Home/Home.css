@@ -1,0 +1,163 @@
+.home {
+  padding-top: 5rem;
+}
+.homeTitle {
+  font-family: var(--font-txt-main);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.searchParam {
+  position: relative;
+  border-bottom: 2px solid var(--color-txt-main);
+  margin: 1rem 0;
+}
+.searchInput {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  font-family: var(--font-txt-sec);
+  font-size: 1rem;
+  width: 60%;
+}
+.searchActions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.searchIcon,
+.clearIcon {
+  cursor: pointer;
+  transition: var(--trans-main);
+}
+.searchIcon:hover,
+.clearIcon:hover {
+  opacity: 0.5;
+}
+.homeBody {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin: 0 0 3rem 0;
+}
+.loadMoreBtn {
+  display: block;
+  border: 1px solid var(--color-icon-main);
+  outline: none;
+  background-color: transparent;
+  color: var(--color-icon-main);
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  text-transform: capitalize;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--trans-main);
+}
+.loadMoreBtn:hover {
+  background-color: var(--color-icon-main);
+  border-color: var(--color-icon-main);
+  color: var(--color-bg-main);
+}
+.filterRecipes {
+  position: relative;
+  width: 15rem;
+  user-select: none;
+  margin-left: auto;
+  margin-bottom: 4rem;
+}
+.filterTitle {
+  border: 1px solid var(--color-icon-main);
+  background: var(--color-icon-main);
+  color: var(--color-bg-main);
+  padding: 0.5rem 2rem;
+  font-family: var(--font-txt-small-sec);
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.filterList {
+  display: none;
+  position: absolute;
+  top: 2.7rem;
+  left: 0;
+  border: 1px solid var(--color-icon-main);
+  background-color: var(--color-bg-main);
+  width: 100%;
+  z-index: 100;
+  font-family: var(--font-txt-small-main);
+}
+.filterRecipes:hover .filterList {
+  display: inline-block;
+}
+.filterList li {
+  padding: 0.5rem 1rem;
+  transition: var(--trans-main);
+  cursor: pointer;
+}
+.filterList li:hover,
+.selectedFilter {
+  background-color: var(--color-bg-third);
+  color: var(--color-txt-main);
+}
+.noResult {
+  margin: 5rem 0;
+  font-family: var(--font-txt-small-main);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-txt-sec);
+  user-select: none;
+}
+@media (min-width: 576px) {
+  .searchInput {
+    width: 75%;
+  }
+  .homeBody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .homeTitle {
+    font-size: 2rem;
+  }
+  .searchParam {
+    margin: 1rem 0;
+  }
+  .searchInput {
+    font-size: 1.25rem;
+    width: 80%;
+  }
+  .searchActions {
+    gap: 0.75rem;
+  }
+  .clearIcon,
+  .clearIcon {
+    font-size: 1.2rem;
+  }
+  .homeBody {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem 0.75rem;
+  }
+  .loadMoreBtn {
+    padding: 1rem 4rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .searchInput {
+    width: 90%;
+  }
+  .homeBody {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

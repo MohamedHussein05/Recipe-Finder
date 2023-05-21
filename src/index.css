@@ -1,0 +1,81 @@
+:root {
+  --color-txt-main: #000000;
+  --color-txt-sec: #7f7f7f;
+  --color-bg-main: #ffffff;
+  --color-bg-sec: #f9f9f9;
+  --color-bg-third: #e0e0e0;
+  --color-icon-main: #f06292;
+  --color-brand-fb: #1877f2;
+  --color-brand-twitter: #1da1f2;
+  --color-brand-insta: #e1306c;
+  --color-brand-yt: #ff0000;
+  --box-shadow: 0 3px 10px #00000033;
+  --font-logo: "Norican", cursive;
+  --font-txt-main: "Playfair Display", serif;
+  --font-txt-sec: "Roboto", sans-serif;
+  --font-txt-small-main: "Jura", sans-serif;
+  --font-txt-small-sec: "Syne Mono", monospace;
+  --trans-main: 0.3s;
+  --trans-sec: 0.5s;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: var(--font-txt-sec);
+  min-height: 100vh;
+  line-height: 1.6;
+  background-color: var(--color-bg-main);
+  color: var(--color-txt-main);
+  text-transform: capitalize;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.app > * {
+  width: 100%;
+  padding: 1rem;
+}
+.container {
+  max-width: 1440px;
+}
+.logo {
+  font-size: 2.5rem;
+  font-family: var(--font-logo);
+  user-select: none;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .logo {
+    font-size: 3.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .app > * {
+    padding: 2rem 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .logo {
+    font-size: 3.5rem;
+  }
+}
